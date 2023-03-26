@@ -1,0 +1,13 @@
+<h1>Locaties: </h1>
+<table class="tbl-locaties" *ngIf="locaties">
+    <tr>
+        <td>Naam</td>
+        <td>Beschrijving</td>
+        <td>Capiciteit</td>
+    </tr>
+    <tr *ngFor="let e of locaties">
+      <td>{{e.name}}</td>
+      <td>{{e.description}}</td>
+      <td>{{e.capacity}}</td>
+    </tr>
+  </table>

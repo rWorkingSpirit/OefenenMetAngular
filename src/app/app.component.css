@@ -1,0 +1,16 @@
+.tbl-naam-geld
+{
+    text-align: center;
+
+}
+
+.tbl-naam-geld tr td
+{
+    border: 2px solid;
+    padding: 8px;
+}
+
+th
+{
+    border: 3px solid;
+}

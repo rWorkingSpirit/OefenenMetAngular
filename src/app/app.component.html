@@ -1,0 +1,47 @@
+
+<h1>Lets start with {{title}}!</h1>
+
+<p>Mijn Bankrekening: ${{geld}}</p>
+
+<button (click)="GeldVerhogen()">Klik hier voor meer geld!</button>
+
+<br>
+<br>
+
+<a routerLink="/eventoverzichtlink" routerLinkActive="active" ariaCurrentWhenActive="page">Evenement overzicht</a>
+<br>
+<a routerLink="/linkNaarEvenement" routerLinkActive="active" ariaCurrentWhenActive="page">Bijzonder</a>
+<br>
+<a routerLink="/locatiesOphalen" routerLinkActive="active" ariaCurrentWhenActive="page">Locaties pagina</a>
+
+
+<br>
+<br>
+
+
+<table class="tbl-naam-geld table table-info" *ngIf="eventTable">
+  <thead>
+    <tr>
+      <th>Organisator</th>
+      <th>Voorstel</th>
+      <th>Categorie</th>
+      <th>Locatie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of eventTable">
+      <td>{{e.organisator}}</td>
+      <td>{{e.voorstel}}</td>
+      <td>{{e.categorie}}</td>
+      <td>{{e.locatie}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<label for="btn-extra-row">Klik hier voor nog een extra 'row' in de tafel hierboven!</label>
+<button id="btn-extra-row" (click)="FillEventTable()">Klik</button>
+
+
+
+<router-outlet></router-outlet>
+
